@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "products": {
+    "autolastz": {
+      "latest": "2.10.0",
+      "minimum": "2.7.0",
+      "released_at": "2026-10-20",
+      "download_url": "https://github.com/0xphuong/autolastz-releases/releases/download/v2.10.0/AutoLastZ-Setup-2.10.0.exe",
+      "sha256": "",
+      "size": 0,
+      "changelog_url": "https://github.com/0xphuong/autolastz-releases/blob/main/CHANGELOG.md#2100--2026-10-20"
+    }
+  }
+}
