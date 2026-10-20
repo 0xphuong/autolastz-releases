@@ -3,6 +3,15 @@
 Bản sao changelog của ứng dụng AutoLastZ (bot cho bản PC *Last Z: Survival Shooter*). Bộ cài từng bản ở
 [Releases](https://github.com/0xphuong/autolastz-releases/releases); app đọc [`versions.json`](versions.json) để tự cập nhật.
 
+## [2.12.0] — 2026-10-20
+
+### Đổi
+- Tính năng ngoài gói license **vẫn hiện nhưng khoá**: mọi công tắc, ô nhập, chip, nút chọn chế độ trong mục đó chuyển
+  xám và không bấm được (trước chỉ mờ tên tab, bên trong vẫn chỉnh được dù không chạy). Khoá theo đúng mã tính năng:
+  thiếu `diamond` thì chỉ khoá mục Kim cương, thiếu `season` chỉ khoá Kho Báu mùa giải…
+- Dòng *Sẽ chạy* và chấm tab chỉ tính việc gói cho phép, trùng với những gì Start thực sự chạy.
+- Đổi license lúc đang mở app (nhập key, *Kiểm tra lại*, đổi gói trên portal) → khoá/mở lại ngay.
+
 ## [2.11.0] — 2026-10-20
 
 ### Thêm (giao diện, gói 3)
