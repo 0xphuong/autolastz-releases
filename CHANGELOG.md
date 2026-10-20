@@ -3,6 +3,18 @@
 Bản sao changelog của ứng dụng AutoLastZ (bot cho bản PC *Last Z: Survival Shooter*). Bộ cài từng bản ở
 [Releases](https://github.com/0xphuong/autolastz-releases/releases); app đọc [`versions.json`](versions.json) để tự cập nhật.
 
+## [2.11.0] — 2026-10-20
+
+### Thêm (giao diện, gói 3)
+- Dòng **Sẽ chạy: …** ngay dưới hàng tab và **chấm màu trên tên tab** có việc đang bật — nhìn ra bot sẽ làm gì khi Start
+  mà không phải bấm qua từng tab; đổi ngay khi gạt công tắc, chưa cần lưu.
+- Bộ đếm đủ các việc trên dải thông tin: Giành hòm · Đào · Tổ đội (khủng long, zombie) · Boss · Radar.
+- Có bản mới: **băng vàng** nguyên bề ngang dưới dải thông tin với nút *Cập nhật* (thay dòng chữ nhỏ dễ tràn).
+
+### Đổi
+- *Cửa sổ game* gọn thành một hàng (tên mục, công tắc từng cửa sổ, nút ⟳) — trả chỗ cho nội dung tab.
+- Tab *Sự kiện* có màu cam riêng (trước trùng vàng với Kho Báu).
+
 ## [2.10.7] — 2026-10-20
 
 ### Đổi (giao diện, gói 2 — dễ đọc)
