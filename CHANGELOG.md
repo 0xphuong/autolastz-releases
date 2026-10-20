@@ -3,6 +3,15 @@
 Bản sao changelog của ứng dụng AutoLastZ (bot cho bản PC *Last Z: Survival Shooter*). Bộ cài từng bản ở
 [Releases](https://github.com/0xphuong/autolastz-releases/releases); app đọc [`versions.json`](versions.json) để tự cập nhật.
 
+## [2.10.4] — 2026-10-20
+
+### Sửa (giao diện, gói 1)
+- Bộ đếm trên đầu không còn bị cắt chữ (*spam Kho Báu* · *lượt đào*).
+- Ô số không hiện `.0` thừa (15.0 → 15); config cũng lưu số nguyên khi là số nguyên.
+- Mọi ô nhập cùng bề rộng, mép phải thẳng hàng.
+- Chip chọn tài nguyên (tab Đào): đang chọn = nền màu + ✓, tắt = viền mảnh không nền — nhìn ra ngay cái nào bật.
+- Khung Hoạt động không còn dòng tiếng Anh `license state VALID` của thư viện license.
+
 ## [2.10.3] — 2026-10-20
 
 ### Đổi
