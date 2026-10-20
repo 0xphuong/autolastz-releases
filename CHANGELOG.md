@@ -3,6 +3,12 @@
 Bản sao changelog của ứng dụng AutoLastZ (bot cho bản PC *Last Z: Survival Shooter*). Bộ cài từng bản ở
 [Releases](https://github.com/0xphuong/autolastz-releases/releases); app đọc [`versions.json`](versions.json) để tự cập nhật.
 
+## [2.10.3] — 2026-10-20
+
+### Đổi
+- License: tab *Sự kiện* (Bạo Quân Zombie, BOSS Cuồng Bạo) dùng mã tính năng riêng **`event`** trên NexKey, không còn
+  đi chung gói *Khủng long*. Gói chưa có `event` thì tab bị khoá và hai việc này bị bỏ qua khi Start (các việc khác vẫn chạy).
+
 ## [2.10.2] — 2026-10-20
 
 ### Đổi
