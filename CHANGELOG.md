@@ -3,6 +3,13 @@
 Bản sao changelog của ứng dụng AutoLastZ (bot cho bản PC *Last Z: Survival Shooter*). Bộ cài từng bản ở
 [Releases](https://github.com/0xphuong/autolastz-releases/releases); app đọc [`versions.json`](versions.json) để tự cập nhật.
 
+## [2.10.1] — 2026-10-20
+
+### Đổi
+- Tab mới **Sự kiện** chứa *Bạo Quân Zombie* và *BOSS Cuồng Bạo* (trước nằm trong tab *Khủng long*). Cấu hình chuyển từ
+  `dino.zombie` / `dino.boss` sang `events.zombie` / `events.boss`; `config.json` cũ được tự chuyển, không mất cài đặt.
+  Hai việc này vẫn thuộc gói license *Khủng long*.
+
 ## [2.10.0] — 2026-10-20
 
 ### Thêm
