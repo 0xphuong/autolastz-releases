@@ -3,6 +3,14 @@
 Bản sao changelog của ứng dụng AutoLastZ (bot cho bản PC *Last Z: Survival Shooter*). Bộ cài từng bản ở
 [Releases](https://github.com/0xphuong/autolastz-releases/releases); app đọc [`versions.json`](versions.json) để tự cập nhật.
 
+## [2.10.7] — 2026-10-20
+
+### Đổi (giao diện, gói 2 — dễ đọc)
+- Chữ gợi ý dưới các ô sáng hơn (đạt tương phản 4,5:1), không còn mờ như trước.
+- Tiêu đề mục không IN HOA nữa (chữ hoa có dấu cỡ nhỏ khó đọc), cỡ 9pt, bỏ phần mô tả vị trí icon trong ngoặc
+  (*Bệnh viện*, *Nhiệm vụ Radar*, *Kim cương*, *BOSS Cuồng Bạo*, *Telegram*, *Zalo*).
+- Gợi ý ở Khủng long, Sự kiện, Radar, Kim cương, Thông báo rút còn một dòng.
+
 ## [2.10.6] — 2026-10-20
 
 ### Sửa
