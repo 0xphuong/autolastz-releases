@@ -6,8 +6,8 @@
       "minimum": "2.7.0",
       "released_at": "2026-10-20",
       "download_url": "https://github.com/0xphuong/autolastz-releases/releases/download/v2.10.0/AutoLastZ-Setup-2.10.0.exe",
-      "sha256": "",
-      "size": 0,
+      "sha256": "f8c1208c669d7ed3bdd46709e4e09b7d4fe28f67b036e44d690ab62198fafdd3",
+      "size": 61142680,
       "changelog_url": "https://github.com/0xphuong/autolastz-releases/blob/main/CHANGELOG.md#2100--2026-10-20"
     }
   }
