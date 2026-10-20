@@ -3,6 +3,12 @@
 Bản sao changelog của ứng dụng AutoLastZ (bot cho bản PC *Last Z: Survival Shooter*). Bộ cài từng bản ở
 [Releases](https://github.com/0xphuong/autolastz-releases/releases); app đọc [`versions.json`](versions.json) để tự cập nhật.
 
+## [2.10.6] — 2026-10-20
+
+### Sửa
+- 2.10.5 sập ngay khi mở (`bad screen distance "0 10"` — tham số `pady` sai kiểu ở dải thông tin header). Ai đã lỡ cập nhật
+  2.10.5 thì tải bộ cài 2.10.6 từ trang Releases và cài đè.
+
 ## [2.10.5] — 2026-10-20
 
 ### Đổi (giao diện, gói 1b)
