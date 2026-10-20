@@ -3,6 +3,15 @@
 Bản sao changelog của ứng dụng AutoLastZ (bot cho bản PC *Last Z: Survival Shooter*). Bộ cài từng bản ở
 [Releases](https://github.com/0xphuong/autolastz-releases/releases); app đọc [`versions.json`](versions.json) để tự cập nhật.
 
+## [2.10.5] — 2026-10-20
+
+### Đổi (giao diện, gói 1b)
+- Header xếp lại: hàng trên chỉ còn logo, tên, trạng thái và Start/Stop; **license · lượt giành hòm · lượt đào · dòng cập
+  nhật** nằm trên một dải riêng nguyên bề ngang — hết cảnh bộ đếm bị cắt khi trạng thái dài ra lúc đang chạy.
+- Tab Kho Báu dùng từ dễ hiểu: chế độ *Đào + giành hòm / Chỉ giành hòm / Chỉ thông báo* (thay *Đào Full / Bỏ Đào / Chỉ
+  MayBay*), *Bắt đầu bấm khi còn*, *Bấm thêm sau khi hết giờ*, *Nhịp bấm (ms) min–max* trên một hàng, *Độ lệch điểm bấm*;
+  gợi ý rút còn một dòng. Nút *Thử bấm 3 giây*. Mã cửa sổ (0x…) chỉ hiện khi có nhiều cửa sổ game.
+
 ## [2.10.4] — 2026-10-20
 
 ### Sửa (giao diện, gói 1)
