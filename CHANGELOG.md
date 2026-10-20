@@ -3,6 +3,12 @@
 Bản sao changelog của ứng dụng AutoLastZ (bot cho bản PC *Last Z: Survival Shooter*). Bộ cài từng bản ở
 [Releases](https://github.com/0xphuong/autolastz-releases/releases); app đọc [`versions.json`](versions.json) để tự cập nhật.
 
+## [2.10.2] — 2026-10-20
+
+### Đổi
+- Cập nhật: app mở lâu ngày tự kiểm tra bản mới mỗi 24 giờ (`update.check_every_hours`), có bản mới thì hiện dòng vàng
+  và ghi log một lần để người dùng bấm cập nhật — không tự cài. Log lúc tải không in link nữa.
+
 ## [2.10.1] — 2026-10-20
 
 ### Đổi
