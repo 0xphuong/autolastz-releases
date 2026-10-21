@@ -3,6 +3,13 @@
 Bản sao changelog của ứng dụng AutoLastZ (bot cho bản PC *Last Z: Survival Shooter*). Bộ cài từng bản ở
 [Releases](https://github.com/0xphuong/autolastz-releases/releases); app đọc [`versions.json`](versions.json) để tự cập nhật.
 
+## [2.13.0] — 2026-10-21
+
+### Thêm
+- Kho Báu → mục *Khi cướp được*: ô **Nhắn chat liên minh** (nội dung nhập sẵn) + nút **Gửi thử** (mở chat → Liên Minh →
+  gõ → Enter → quay lại; lưu ảnh `chat_typed` / `chat_sent` trong `debug/` để đối chiếu). Điều kiện "cướp được" chưa
+  có cách nhận biết nên tin chỉ gửi khi bước này được bổ sung (đang chờ dấu hiệu từ người dùng).
+
 ## [2.12.4] — 2026-10-21
 
 ### Sửa
