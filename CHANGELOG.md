@@ -3,6 +3,34 @@
 Bản sao changelog của ứng dụng AutoLastZ (bot cho bản PC *Last Z: Survival Shooter*). Bộ cài từng bản ở
 [Releases](https://github.com/0xphuong/autolastz-releases/releases); app đọc [`versions.json`](versions.json) để tự cập nhật.
 
+## [2.14.0] — 2026-10-21
+
+### Thêm
+- **Lì xì Liên Minh** (tab *Sự kiện*, mã license `event`): thấy ghim bao lì xì đỏ ở góc dưới-phải bản đồ → mở chat →
+  bấm icon lì xì đầu khung chat (có số chưa nhận) → *Lịch sử Lì Xì* → *Nhận* từng thẻ → *Nhận* trên bao lì xì → *Xác nhận*
+  (KC cộng thẳng vào tài khoản) → *Quay lại*. Danh sách tự đóng sau mỗi lần nhận nên bot mở lại icon cho cái kế tiếp.
+  Ghim bị tin chat mới hơn che mất nên ngoài ghim còn mở chat kiểm tra định kỳ (*Mở chat kiểm tra mỗi*, mặc định 900 s,
+  0 = chỉ khi thấy ghim).
+
+## [2.13.2] — 2026-10-21
+
+### Sửa
+- Kho Báu: sau khi giành hòm, bot mở chat bấm thẻ trực thăng mới nhất để xem có kho báu kế tiếp — nhưng trực thăng của
+  kho báu vừa xong còn hiện trên bản đồ vài phút nên bị coi là kho báu mới và báo nhầm *"Phát hiện máy bay (kho báu kế
+  tiếp)"* (21/10 16:38), rồi Phase A lại bấm trực thăng cũ nhiều lần. Giờ sau spam, thông báo "phát hiện máy bay" chỉ gửi
+  khi Phase C đọc được đồng hồ (kho báu mới thật), và trong `after_spam_ignore_sec` (120 s) Phase A bỏ qua trực thăng /
+  thẻ chat cũ.
+
+## [2.13.1] — 2026-10-21
+
+### Sửa
+- Kim cương: nhận ra bản đồ chiến lược cả khi bảng chú giải góc trái bị ẩn (thêm mẫu nút *Mô tả* dưới minimap) —
+  21/10 15:19–15:33 bot zoom được nhưng tưởng thất bại, mỗi phút mất 15 s rồi bỏ.
+- Kim cương: toạ độ căn cứ đọc sai (OCR trả X=42 Y=50) làm mọi mỏ bị coi là quá xa — giờ kiểm tra hợp lý khi đọc và
+  tự phát hiện sai khi khoảng cách theo toạ độ lệch > 80 km so với ước tính pixel, đọc lại lượt sau.
+- Kẹt ở màn lạ (vd radar còn mở sau Stop/Start): sau khi bấm ra ngoài thử *Quay lại* / *Đóng* ngay, không đợi lượt sau
+  (trước mất ~3 phút mới thoát).
+
 ## [2.13.0] — 2026-10-21
 
 ### Thêm
