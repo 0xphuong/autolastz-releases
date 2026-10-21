@@ -3,6 +3,17 @@
 Bản sao changelog của ứng dụng AutoLastZ (bot cho bản PC *Last Z: Survival Shooter*). Bộ cài từng bản ở
 [Releases](https://github.com/0xphuong/autolastz-releases/releases); app đọc [`versions.json`](versions.json) để tự cập nhật.
 
+## [2.12.3] — 2026-10-21
+
+### Sửa
+- Bot kẹt 15 phút ở popup *Hành Quân* sau khi gửi xe đào Kim cương (21/10 06:37): cú bấm *Hành Quân* không ăn nhưng bot
+  vẫn báo "đã gửi đội" và không ai đóng popup (nó không có nút X), HUD bị che nên không việc nào chạy. Giờ Đào và Kim
+  cương **chờ popup đóng** mới tính là đã gửi; không đóng thì bấm ra ngoài, bỏ qua lượt, lưu ảnh `gather_march` /
+  `diamond_march`. Vòng lặp chính thấy popup xuất quân còn mở thì bấm ra ngoài; làm mới góc nhìn mà vẫn không thấy
+  Trụ Sở / Thế Giới thì bấm ra ngoài và lưu ảnh `stuck_view_*.png` (tối đa 10 phút/lần).
+- Đào chỉ chạy khi thấy nút 🔍 (bản đồ thế giới thường) — trước gate bằng nút Trụ Sở, nút này có cả ở bản đồ chiến lược
+  nên bot đọc nhầm số xe ở đó ("không đọc được số xe — thử 1 lượt").
+
 ## [2.12.2] — 2026-10-21
 
 ### Sửa
