@@ -3,6 +3,14 @@
 Bản sao changelog của ứng dụng AutoLastZ (bot cho bản PC *Last Z: Survival Shooter*). Bộ cài từng bản ở
 [Releases](https://github.com/0xphuong/autolastz-releases/releases); app đọc [`versions.json`](versions.json) để tự cập nhật.
 
+## [2.12.4] — 2026-10-21
+
+### Sửa
+- Kim cương: bấm nhầm icon trắng không phải mỏ (vd nhà người chơi) rồi **lăn chuột thêm làm game văng ra bản đồ lãnh
+  thổ** (21/10 09:02 và 09:07). Giờ: bỏ icon sát mép màn (bị HUD che), không bấm lại icon đã thử trong lượt, bấm xong mà
+  vẫn ở bản đồ chiến lược thì **không lăn chuột**, không zoom được thì về căn cứ thay vì bỏ game ở zoom xa; đóng bảng 🔍
+  chắc chắn trước khi lăn; lưu ảnh `diamond_popup` / `diamond_zoom` / `diamond_lost` để chỉnh mẫu nhận diện.
+
 ## [2.12.3] — 2026-10-21
 
 ### Sửa
