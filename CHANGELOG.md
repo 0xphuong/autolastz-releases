@@ -3,6 +3,16 @@
 Bản sao changelog của ứng dụng AutoLastZ (bot cho bản PC *Last Z: Survival Shooter*). Bộ cài từng bản ở
 [Releases](https://github.com/0xphuong/autolastz-releases/releases); app đọc [`versions.json`](versions.json) để tự cập nhật.
 
+## [2.13.1] — 2026-10-21
+
+### Sửa
+- Kim cương: nhận ra bản đồ chiến lược cả khi bảng chú giải góc trái bị ẩn (thêm mẫu nút *Mô tả* dưới minimap) —
+  21/10 15:19–15:33 bot zoom được nhưng tưởng thất bại, mỗi phút mất 15 s rồi bỏ.
+- Kim cương: toạ độ căn cứ đọc sai (OCR trả X=42 Y=50) làm mọi mỏ bị coi là quá xa — giờ kiểm tra hợp lý khi đọc và
+  tự phát hiện sai khi khoảng cách theo toạ độ lệch > 80 km so với ước tính pixel, đọc lại lượt sau.
+- Kẹt ở màn lạ (vd radar còn mở sau Stop/Start): sau khi bấm ra ngoài thử *Quay lại* / *Đóng* ngay, không đợi lượt sau
+  (trước mất ~3 phút mới thoát).
+
 ## [2.13.0] — 2026-10-21
 
 ### Thêm
