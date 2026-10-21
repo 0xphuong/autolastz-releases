@@ -3,6 +3,12 @@
 Bản sao changelog của ứng dụng AutoLastZ (bot cho bản PC *Last Z: Survival Shooter*). Bộ cài từng bản ở
 [Releases](https://github.com/0xphuong/autolastz-releases/releases); app đọc [`versions.json`](versions.json) để tự cập nhật.
 
+## [2.12.2] — 2026-10-21
+
+### Sửa
+- Kho Báu: ảnh mẫu nút *Kính lúp* có dính dòng chữ "Thám Dò" bên dưới nên điểm bấm lệch xuống dưới nút — đã cắt bỏ, bấm
+  đúng tâm nút.
+
 ## [2.12.1] — 2026-10-21
 
 ### Sửa
