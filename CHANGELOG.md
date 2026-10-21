@@ -3,6 +3,14 @@
 Bản sao changelog của ứng dụng AutoLastZ (bot cho bản PC *Last Z: Survival Shooter*). Bộ cài từng bản ở
 [Releases](https://github.com/0xphuong/autolastz-releases/releases); app đọc [`versions.json`](versions.json) để tự cập nhật.
 
+## [2.12.1] — 2026-10-21
+
+### Sửa
+- Kho Báu: sau khi đội đi đào, bấm đúng tâm trực thăng chỉ mở popup đội (marker đội đè lên) nên không ra đồng hồ —
+  giờ thử thêm 3 điểm khác trên thân máy bay, đóng popup lạ giữa các lần; không được thì lưu ảnh `khobau_noclock_*.png`.
+- Kho Báu (Đào + giành hòm): game không còn hỏi *Xác nhận* sau *Hành Quân* — không log nhầm "bỏ qua bước đào" nữa.
+- Mở chat (kho báu kế tiếp, kiểm tra hòm): bấm đúng thanh chat (y≈915) — trước bấm hụt phía trên nên "không mở được chat".
+
 ## [2.12.0] — 2026-10-20
 
 ### Đổi
