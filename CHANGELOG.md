@@ -3,6 +3,14 @@
 Bản sao changelog của ứng dụng AutoLastZ (bot cho bản PC *Last Z: Survival Shooter*). Bộ cài từng bản ở
 [Releases](https://github.com/0xphuong/autolastz-releases/releases); app đọc [`versions.json`](versions.json) để tự cập nhật.
 
+## [2.15.1] — 2026-10-22
+
+### Sửa
+- Bạo Quân Zombie gọn và nhanh hơn: bấm đầu lâu → *Tổ Đội* → *Hành Quân*, xe về thì lặp lại. Chưa thấy *Tổ Đội* thì bấm
+  đầu lâu thêm lần nữa thay vì bấm ra ngoài bản đồ — cú bấm đó trúng ô đất, mở menu Sở Trường / Xây dựng / Dời Thành
+  che boss làm các lượt sau càng hỏng (22/10 21:03–21:07). Thất bại chỉ nghỉ 10 s (trước 30 s).
+- Đang có sự kiện Bạo Quân Zombie thì không *làm mới góc nhìn* (không chuyển Trụ Sở ↔ Thế Giới mỗi ~75 s).
+
 ## [2.15.0] — 2026-10-22
 
 ### Thêm
