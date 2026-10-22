@@ -3,6 +3,20 @@
 Bản sao changelog của ứng dụng AutoLastZ (bot cho bản PC *Last Z: Survival Shooter*). Bộ cài từng bản ở
 [Releases](https://github.com/0xphuong/autolastz-releases/releases); app đọc [`versions.json`](versions.json) để tự cập nhật.
 
+## [2.16.0] — 2026-10-22
+
+### Thêm
+- **Mở game từ AutoLastZ**: nút *Mở game* cạnh danh sách cửa sổ — mở qua launcher `Last Z.exe` (như bấm shortcut;
+  game cần tham số launcher truyền), chờ cửa sổ hiện, chỉnh 720×950, chờ vào tới bản đồ.
+- **Tự mở game khi Start** (tab Cài đặt → Game, mặc định bật): bấm Start mà chưa có cửa sổ Last Z thì mở game, vào bản
+  đồ xong tự chạy. *Đường dẫn game* để trống = tự tìm (`%LOCALAPPDATA%\Last Z\Last Z.exe`, hoặc suy từ game đang chạy
+  và tự nhớ nếu cài chỗ khác).
+- Danh sách cửa sổ **tự quét mỗi 5 giây** (bỏ nút ⟳), kèm trạng thái: *đang chạy*, *thu nhỏ*, *sai cỡ*.
+- Mở game xong tự **đóng các popup mở đầu** (sự kiện / thông báo, nút X hoặc quay lại) tới khi đứng ở bản đồ Thế Giới.
+- **Game tắt giữa chừng thì tự mở lại** (khi bật *Tự mở game khi Start*): phát hiện cửa sổ game mất ngay (trước đây
+  bấm mù nút Thế Giới 2 phút rồi dừng hẳn — 22/10 23:21), mở lại qua launcher, vào bản đồ rồi chạy tiếp; tối đa 3 lần
+  mỗi giờ, báo Telegram / Zalo mỗi lần.
+
 ## [2.15.1] — 2026-10-22
 
 ### Sửa
