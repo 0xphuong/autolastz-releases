@@ -3,6 +3,51 @@
 Bản sao changelog của ứng dụng AutoLastZ (bot cho bản PC *Last Z: Survival Shooter*). Bộ cài từng bản ở
 [Releases](https://github.com/0xphuong/autolastz-releases/releases); app đọc [`versions.json`](versions.json) để tự cập nhật.
 
+## [2.15.0] — 2026-10-22
+
+### Thêm
+- Kho Báu: **biết có cướp được hòm hay không.** Sau khi spam, bot mở chat Liên Minh, bấm thẻ *"… đã được khám phá
+  xong!"* mới nhất (bỏ qua thẻ *"thưởng gấp đôi"*) và xem danh sách Chi Tiết: dòng của mình nền xanh (ở vị trí nào cũng
+  được) = cướp được. Thẻ bị tin mới đẩy lên thì cuộn chat lên tìm (tối đa 3 lần). Cướp được thì gửi tin *Nhắn chat liên minh* (nếu có nhập) vào chat Liên Minh trong game; kết quả
+  ghi vào log và ảnh `khobau_won` / `khobau_lost`, không gửi Telegram / Zalo.
+- Tab **Mùa Giải**: thêm **Zombie** (đánh một mình, nút *Công*, ~9 thể lực Lv1) và **Zombie Khổng Lồ** (*Tổ Đội*,
+  ~19 thể lực Lv6), mỗi loại có Bật / Cấp / Số lần đánh như khủng long, đánh xen kẽ với khủng long. Thể lực không đủ cho
+  một loại thì chỉ dừng loại đó; không đủ cho loại rẻ nhất thì dừng cả tab.
+
+### Đổi
+- Ảnh debug (`debug/*.png` khi một bước thất bại, ảnh sau mỗi lần spam) chỉ lưu khi license có tính năng
+  **`development`** (cấp cho người test trên portal NexKey); bản cho khách không ghi ảnh màn hình game nữa. Log chữ vẫn
+  ghi như cũ. Chạy từ mã nguồn thì luôn lưu.
+- Tab *Khủng long* đổi tên thành **Mùa Giải**; tiêu đề mục bỏ chú thích "(ô trái)" / "(ô phải)". Cấu hình và mã license
+  giữ nguyên (`dino`).
+
+### Sửa
+- **Kho báu xen ngang việc phụ:** đang đào / kim cương / radar / mùa giải / lì xì… mà thấy ghim máy bay thì bỏ dở ngay
+  (kiểm tra mỗi 2 s trong lúc làm), dọn màn về bản đồ rồi đi kho báu — trước đây phải chờ việc phụ xong (kim cương ~1
+  phút), ghim bị tin chat mới che mất là lỡ kho báu.
+- Mùa Giải thiếu thể lực: **nghỉ 10 phút rồi thử lại** (chỉ nghỉ loại đắt nếu còn đủ cho loại rẻ hơn), không dừng hẳn
+  tới lần Start sau nữa.
+- Vừa Start, các việc phụ không còn dồn liền nhau: lần đầu chạy cách nhau 15 s theo thứ tự ưu tiên.
+- Bấm Stop: chỉ báo "Đã dừng" (và cho Start lại) khi vòng bot đã thoát hẳn — trước đây bot còn bấm thêm 2–3 s sau đó,
+  Start ngay có thể chạy chồng hai vòng.
+- Kho báu của **liên minh khác**: bấm trực thăng thì game báo *"Một kho báu thuộc Liên Minh khác đang được khám phá"*
+  (không có Kính lúp / đồng hồ) nhưng bot vẫn báo Telegram rồi thử đào + mở đồng hồ mỗi phút (22/10 15:46). Giờ nhận ra
+  popup này, đóng lại (ESC), không báo, và chỉ bỏ qua đúng trực thăng đó (cùng chỗ trên màn) trong 1 phút rồi kiểm tra lại; trực thăng ở
+  chỗ khác và kho báu chia sẻ trong chat vẫn được bấm ngay.
+- Kho Báu bị bỏ lỡ khi đang đánh Zombie Khổng Lồ (22/10 15:28): bấm thẻ trực thăng trong chat xong, camera còn đang bay
+  tới nơi, 3 s sau chưa thấy trực thăng nên bot đi làm việc phụ. Giờ chờ trực thăng hiện tối đa 8 s; chưa thấy thì giữ
+  ưu tiên kho báu 90 s — không làm việc phụ nào (Mùa Giải, đào, radar…), cứ 20 s mở chat bấm lại thẻ trực thăng mới nhất.
+- Nguyên nhân gốc của báo nhầm *"kho báu kế tiếp"*: hình trực thăng trên thẻ *"đã được khám phá xong"* trong chat khớp
+  mẫu trực thăng bản đồ (0.90), nên bot tưởng kho báu đã xong vẫn còn sống và bấm vào thẻ. Giờ trực thăng chỉ được tính
+  khi không đứng trong màn chat.
+- Nhắn chat có thể vào nhầm kênh: mẫu tab *Liên Minh* / *Trò chuyện* là giao diện tiếng Anh cũ ("Alliance" / "Chat")
+  nên không bao giờ khớp, bot gõ vào tab đang mở sẵn (có thể là *Thế Giới*). Giờ bấm tab theo vị trí rồi kiểm tra đúng
+  *Liên Minh → Trò chuyện* đang được chọn mới gõ; không chắc thì không gửi (lưu ảnh `chat_tab`).
+- *Gửi thử* báo "đã gửi" nhưng không có gì được gửi: chữ chưa vào ô nhập (ô vẫn "Nhấn để nhập văn bản"). Giờ bot chỉ
+  bấm thanh chat khi chat chưa mở, bấm ô nhập rồi gõ, kiểm tra nút gửi (máy bay giấy) đã hiện mới bấm gửi, và chỉ ghi
+  "đã gửi" khi nút đó biến mất; thử lại một lần nếu chưa gõ được.
+- Tiếng Việt có dấu bị thành "?" ("Chúc mừng ạ" → "Chúc m?ng ?"): gõ bằng ký tự Unicode thay vì mã ANSI.
+
 ## [2.14.0] — 2026-10-21
 
 ### Thêm
