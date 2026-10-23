@@ -3,6 +3,17 @@
 Bản sao changelog của ứng dụng AutoLastZ (bot cho bản PC *Last Z: Survival Shooter*). Bộ cài từng bản ở
 [Releases](https://github.com/0xphuong/autolastz-releases/releases); app đọc [`versions.json`](versions.json) để tự cập nhật.
 
+## [2.16.2] — 2026-10-23
+
+### Sửa
+- Nhắn chat Liên Minh không gửi được ở liên minh có **5 tab** chat (báo không nhận ra kênh Liên Minh — liên minh 4 tab
+  thì được): bot bấm tab theo toạ độ cố định của bố cục 4 tab. Giờ tìm tab *Liên Minh* và tab con *Trò chuyện* theo
+  **chữ** trên thanh tab (đúng với mọi số tab), xác nhận đang chọn đúng rồi mới gõ (thêm mẫu tab *Liên Minh* đang chọn
+  cho chat 5 tab — tab hẹp nên chữ nhỏ hơn). Kho Báu mùa giải mở chat cũng dùng cách này.
+- Kẹt ở màn chat có khung **Thông báo Liên Minh** (~73 s sau Start, 23/10): lúc rảnh mà màn chat / popup che bản đồ thì
+  bấm **X** của thông báo rồi *Quay lại* ngay, không chờ lượt *làm mới góc nhìn*. Popup khác có nút X cũng được đóng.
+- Lì xì: bấm icon lì xì đầu khung chat mà danh sách chưa mở thì bấm lại một lần (lần đầu ngay sau khi mở chat hay bị bỏ qua).
+
 ## [2.16.1] — 2026-10-23
 
 ### Thêm
