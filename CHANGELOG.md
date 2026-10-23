@@ -3,6 +3,18 @@
 Bản sao changelog của ứng dụng AutoLastZ (bot cho bản PC *Last Z: Survival Shooter*). Bộ cài từng bản ở
 [Releases](https://github.com/0xphuong/autolastz-releases/releases); app đọc [`versions.json`](versions.json) để tự cập nhật.
 
+## [2.16.1] — 2026-10-23
+
+### Thêm
+- Lì xì Liên Minh: **báo Telegram / Zalo khi phát hiện lì xì chưa nhận** (số lượng + ảnh danh sách), gửi ngay trước khi
+  bot bấm nhận để có thể nhận tay trên điện thoại. Tắt được bằng công tắc *Báo Telegram / Zalo* trong mục Lì xì.
+
+### Sửa
+- Chữa trị: icon đang chữa (3 dấu **+ xanh** và số % đỏ) thì không mở Bệnh Viện nữa — trước đây cứ 2 phút mở rồi đóng
+  Bệnh Viện suốt thời gian chữa (~3 s mỗi lần, có thể chen vào lúc có kho báu). Icon băng gạc trơn (còn lính bị thương)
+  thì vẫn mở Bệnh Viện bấm *Chữa Trị* như cũ.
+- Nhận lính chữa xong: thêm mẫu icon lính nữ (mũ có kính); icon này có 3 kiểu theo loại lính, kiểu thứ 3 chưa có mẫu.
+
 ## [2.16.0] — 2026-10-22
 
 ### Thêm
