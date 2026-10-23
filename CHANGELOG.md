@@ -3,6 +3,13 @@
 Bản sao changelog của ứng dụng AutoLastZ (bot cho bản PC *Last Z: Survival Shooter*). Bộ cài từng bản ở
 [Releases](https://github.com/0xphuong/autolastz-releases/releases); app đọc [`versions.json`](versions.json) để tự cập nhật.
 
+## [2.16.3] — 2026-10-23
+
+### Đổi
+- Giao diện rõ hơn: mỗi tính năng có **dòng tiêu đề đậm kèm công tắc bật/tắt cùng dòng** (vd *Săn Kho Báu ●*, *Zombie
+  Khổng Lồ ●*) thay cho dòng "Bật" riêng; đang bật thì tên sáng + vạch màu của tab, tắt thì tên xám. Bấm vào tên cũng
+  bật/tắt. Tiêu đề nhóm và chữ gợi ý sáng hơn cho dễ đọc.
+
 ## [2.16.2] — 2026-10-23
 
 ### Sửa
