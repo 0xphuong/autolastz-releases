@@ -3,6 +3,65 @@
 Bản sao changelog của ứng dụng AutoLastZ (bot cho bản PC *Last Z: Survival Shooter*). Bộ cài từng bản ở
 [Releases](https://github.com/0xphuong/autolastz-releases/releases); app đọc [`versions.json`](versions.json) để tự cập nhật.
 
+## [2.17.0] — 2026-10-25
+
+### Mới
+- **Giao diện mới** (web nhúng, WebView2 có sẵn trên Windows 10/11) theo bản thiết kế đã duyệt: thanh điều hướng bên
+  trái *Tổng quan · Tính năng · Nhật ký · Thu gọn · Cài đặt*.
+  - *Tổng quan*: bot **đang làm gì** (vd *Canh giờ Kho Báu* + đồng hồ đếm lùi, *Đang giành hòm*, *Chữa trị thương
+    binh*…), xe rảnh, thể lực, cửa sổ game, **hàng đợi việc** (việc nào đến lượt, việc nào *sau m:ss*), số đếm phiên
+    này (giành hòm, tổ đội, đào, lì xì) và hoạt động gần đây.
+  - *Tính năng*: mỗi việc một thẻ có công tắc, lọc *Đang bật / Đang tắt*; bấm thẻ để chỉnh chi tiết. Gói license không
+    có thì thẻ hiện *Cần gói* (xem được, không chỉnh được). Thay đổi **tự lưu ngay**.
+  - *Nhật ký*: dòng thời gian có màu theo nhóm, lọc theo loại, ẩn các bước nhỏ (*Bấm …*, *TIME=*), lưu ra file.
+  - *Thu gọn*: cửa sổ nhỏ 380×640 luôn nằm trên cùng, để cạnh game.
+  - *Cài đặt*: license, game (tự mở game, đường dẫn, chọn cửa sổ), Telegram / Zalo, cách click, công cụ, cập nhật.
+- Máy thiếu WebView2 Runtime thì app tự dùng giao diện cũ.
+- **Tự xếp cửa sổ**: game bên trái, AutoLastZ bên phải, cạnh nhau ở giữa màn hình chứa game, AutoLastZ cao bằng game
+  — không còn đè nhau. Xếp khi mở app, khi thấy cửa sổ game mới, sau khi tự mở game, khi bấm Bắt đầu và khi bật/tắt
+  Thu gọn; màn hình hẹp không đủ chỗ thì game sát trái, AutoLastZ sát phải. Có nút *Sắp xếp ngay* và công tắc tắt ở
+  *Cài đặt → Game* (`window.arrange`). Nhiều cửa sổ game thì không tự xếp.
+- Nút *Mở thư mục debug* chỉ hiện khi license có *Chế độ phát triển* (development).
+- **Kim cương gom vào thẻ *Đào tài nguyên*** (là một ô chọn cạnh Gỗ / Lương thực / Điện / Xu Z): dùng chung số xe
+  và chu kỳ kiểm tra xe rảnh như trước, chỉ cấp tối thiểu + bán kính là riêng. Gói license không có kim cương thì ô
+  đó hiện *cần gói*.
+
+### Sửa
+- **BOSS Cuồng Bạo** báo "không thấy tab BOSS Cuồng Bạo": trang *Sự Kiện* mở lại đúng tab dùng lần trước và dải tab
+  dưới cùng cuộn ngang, nên tab boss có thể nằm ngoài màn. Giờ kéo dải tab sang trái tới hết rồi sang phải tới hết để
+  tìm (thử trên game 24/10: đang ở *Thí Luyện Sinh Tồn*, tìm được tab boss sau ~4 giây).
+- **BOSS Cuồng Bạo** không công được ("popup đang mở không phải boss", 24/10): popup boss đóng gần như ngay khi boss
+  đang bị cả server đánh; bot thấy nút *Công* ở một ảnh rồi đọc tiêu đề ở ảnh chụp sau 80 ms thì popup đã mất. Giờ
+  kiểm nút *Công* và tiêu đề *BOSS* trên cùng một ảnh rồi bấm *Công* ngay. Popup boss có lúc tự đóng trong < 0,5 giây,
+  có lúc đứng yên nhưng cú bấm bị nuốt: chưa ra bảng xuất quân thì popup còn -> bấm lại, popup mất -> chờ thêm 3 giây
+  (bảng xuất quân có thể đang mở chậm) rồi bấm boss mở lại popup; tối đa 4 lần.
+- Trang *Sự Kiện* đang đứng sẵn ở tab BOSS mà bot vẫn kéo hết dải tab (mất 15 giây): giờ nhìn thêm 2,5 giây cho trang
+  hiện hẳn rồi mới kéo.
+- **Chữa trị**: thêm mẫu icon lính chữa xong thứ 3 (mũ len trắng, kính bảo hộ, tai nghe) — trước chỉ nhận ra 2 kiểu nên
+  lính loại này chữa xong không được bấm nhận về.
+- **Kim cương** bấm nhầm mỏ đang có người đào (log đầy "không mở được popup mỏ"): icon kim cương trên bản đồ chiến
+  lược luôn màu trắng, bot lại xét màu icon. Giờ xét **màu số cấp** trong ô tối dưới icon — trắng = trống (bấm), xanh
+  lá = xe mình, xanh dương = người cùng liên minh, đỏ = đồng minh / địch (lướt qua, không bấm). Log ghi mỗi màn có bao
+  nhiêu mỏ mỗi loại.
+- **Kim cương** thấy mỏ trống nhưng bấm không vào (game vẫn ở bản đồ chiến lược): bản đồ còn **trôi theo quán tính**
+  sau khi kéo nên bot bấm vào chỗ icon đã trôi đi. Giờ chờ bản đồ đứng yên rồi mới tìm, chụp lại xác nhận icon còn
+  đúng chỗ trước khi bấm, bấm không ăn thì tìm lại và bấm thêm một lần; vẫn không vào thì bỏ qua mỏ đó (không bấm mò
+  giữa màn nữa — trước đây hay trúng nhà người chơi).
+- **Kim cương** vẫn đi tìm khi đã hết xe: số xe rảnh giờ lấy số nhỏ hơn giữa "xe không có đồng hồ" và ô *đang đi/tổng*
+  (ô *3/3* = hết xe dù đồng hồ dưới một xe chưa hiện), và mỗi lần zoom vào mỏ kiểm tra lại cột xe — hết xe thì dừng
+  tìm, về căn cứ.
+- **Kim cương** đã zoom tới mỏ mà vẫn báo "không mở được popup": camera không phải lúc nào cũng đặt mỏ vào giữa màn
+  (23/10 mỏ nằm sát mép trái), mẫu cũ lại dính số cấp "4". Thêm mẫu chỉ có cụm tinh thể, tìm trên cả màn và bấm mỏ
+  gần tâm nhất; không thấy mỏ thì không bấm mò.
+- **Kim cương** thấy mỏ trống mà bấm không mở được (nguyên nhân thật, thử trên game 23/10): trên bản đồ chiến lược,
+  bấm vào **hình** viên kim cương chỉ làm nó sáng lên; phải bấm vào **ô số cấp** ngay dưới thì popup mỏ mới mở — và
+  mở **ngay tại chỗ**, không zoom vào. Bot giờ bấm ô số (chưa mở thì bấm lại một lần), tìm nút *Thu thập* quanh chỗ
+  vừa bấm và đọc tiêu đề / toạ độ / *Người thu thập* theo vị trí popup thật (sát mép thì đọc trên cả màn); đóng popup
+  bằng ESC. Hết xe ở bước chọn xe thì dừng cả lượt tìm. Chạy thử `diamond --dry-run` trên game: mở popup, đọc đúng
+  *KC Lv1 (20, 97) cách 52 km, trống*.
+- Màu số kim cương: xanh dương và đỏ bị đảo nhau trong log (ảnh MaaFramework là BGR) — đã sửa; nhận "trống" không
+  bị ảnh hưởng.
+
 ## [2.16.3] — 2026-10-23
 
 ### Đổi
