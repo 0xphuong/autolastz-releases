@@ -3,6 +3,30 @@
 Bản sao changelog của ứng dụng AutoLastZ (bot cho bản PC *Last Z: Survival Shooter*). Bộ cài từng bản ở
 [Releases](https://github.com/0xphuong/autolastz-releases/releases); app đọc [`versions.json`](versions.json) để tự cập nhật.
 
+## [2.18.0] — 2026-10-25
+
+### Mới
+- **Xe & thể lực dùng chung** (*Cài đặt → Xe & thể lực dùng chung*, config `limits`):
+  - *Giữ xe cho Kho Báu* (mặc định 1, chỉ khi Kho Báu ở chế độ *Đào + giành hòm*): đào, kim cương, Mùa Giải, BOSS,
+    Bạo Quân, Radar, mùa giải luôn chừa lại chừng này xe rảnh để Kho Báu gửi đi đào ngay.
+  - *Thể lực tối thiểu chung* (mặc định tắt): Mùa Giải, BOSS, Bạo Quân, Radar, cướp mùa giải không tiêu thể lực xuống
+    dưới mức này. Bot nhớ lần đọc thể lực gần nhất (10 phút) nên biết thiếu thì bỏ qua luôn, không mở bảng / trang.
+  - *Nghỉ việc dài sau Kho Báu* (mặc định 300 giây): kho báu hay đến theo cặp, nên sau mỗi kho báu tạm không quét kim
+    cương, radar, trang BOSS; việc ngắn (chữa trị, lì xì, Mùa Giải) vẫn chạy.
+- Màn Tổng quan: hàng đợi việc ghi rõ lý do đang chờ (*tạm nghỉ sau Kho Báu 4:12*, *thiếu thể lực (65, giữ lại 60)*,
+  *nghỉ kim cương*, *chờ xe (3/3)* — hết xe rảnh thì Mùa Giải / Đào / Radar / Bạo Quân ghi rõ thay vì *đến lượt*).
+
+### Đổi
+- Vòng rảnh nhanh hơn: mỗi bộ nhận diện chỉ chạy một lần trên cùng một ảnh chụp (trước đây nút 🔍 được dò tới 8 lần một
+  vòng và ô xe được từng việc phụ đọc lại — đọc ô xe mất ~0,27 giây mỗi lần), nên thấy trực thăng sớm hơn.
+- Bạo Quân Zombie đọc thể lực trong popup tổ đội (theo mức tối thiểu chung).
+
+### Sửa
+- Gửi chat liên minh (*Gửi thử* và tin nhắn khi giành được hòm) báo "không mở được chat": game đôi khi nuốt cú bấm vào
+  thanh chat; giờ bấm lại tối đa 3 lần. Cùng cách mở chat dùng cho đọc kết quả Kho Báu, tìm kho báu kế tiếp sau spam,
+  Lì xì Liên Minh và Kho Báu mùa giải.
+- Bấm Dừng ngay lúc bot đang làm mới góc nhìn (đã bấm Trụ Sở) không còn bỏ game lại ở màn căn cứ — bot bấm nốt Thế Giới.
+
 ## [2.17.0] — 2026-10-25
 
 ### Mới
