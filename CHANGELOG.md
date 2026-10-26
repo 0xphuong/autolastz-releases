@@ -3,6 +3,13 @@
 Bản sao changelog của ứng dụng AutoLastZ (bot cho bản PC *Last Z: Survival Shooter*). Bộ cài từng bản ở
 [Releases](https://github.com/0xphuong/autolastz-releases/releases); app đọc [`versions.json`](versions.json) để tự cập nhật.
 
+## [2.18.2] — 2026-10-26
+
+### Sửa
+- Vẫn báo *"chưa thấy thẻ 'đã được khám phá xong' … (đã cuộn 3 lần)"* dù thẻ có trong chat: trên một số máy chữ trên
+  thẻ hiện khác cỡ nên mẫu ảnh không khớp. Giờ không khớp mẫu thì đọc chữ (OCR) tìm *"khám phá xong"* — không phụ
+  thuộc cỡ chữ hay chỗ xuống dòng. Không tìm thấy thẻ thì lưu ảnh `khobau_nocard` để kiểm tra.
+
 ## [2.18.1] — 2026-10-26
 
 ### Sửa
