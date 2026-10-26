@@ -3,6 +3,14 @@
 Bản sao changelog của ứng dụng AutoLastZ (bot cho bản PC *Last Z: Survival Shooter*). Bộ cài từng bản ở
 [Releases](https://github.com/0xphuong/autolastz-releases/releases); app đọc [`versions.json`](versions.json) để tự cập nhật.
 
+## [2.18.1] — 2026-10-26
+
+### Sửa
+- Giành được hòm nhưng không gửi tin chat: game đổi khung chat (hẹp, ở giữa màn, thêm tab PK) làm chữ trên thẻ
+  *"… đã được khám phá xong!"* nhỏ đi nên bot không nhận ra thẻ, không biết mình thắng. Thêm mẫu mới cho thẻ này.
+- *Gửi thử* / gửi tin khi giành hòm: soạn xong nhưng không gửi — game nuốt cú bấm nút gửi; giờ bấm lại (tối đa 3 lần,
+  chỉ khi vẫn thấy nút gửi) và thử gõ 3 lần thay vì 2.
+
 ## [2.18.0] — 2026-10-25
 
 ### Mới
