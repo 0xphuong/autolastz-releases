@@ -3,6 +3,14 @@
 Bản sao changelog của ứng dụng AutoLastZ (bot cho bản PC *Last Z: Survival Shooter*). Bộ cài từng bản ở
 [Releases](https://github.com/0xphuong/autolastz-releases/releases); app đọc [`versions.json`](versions.json) để tự cập nhật.
 
+## [2.18.3] — 2026-10-27
+
+### Sửa
+- Giành được hòm nhưng bot báo *"không giành được"* khi tên mình nằm dưới 5 dòng đầu của popup *Chi Tiết*: giờ bot
+  kéo danh sách lên (tối đa 4 lần, dừng khi thấy dòng xanh của mình hoặc đã tới cuối danh sách).
+- Tìm thẻ *"đã được khám phá xong"* trong chat: cuộn lên tối đa 10 lần thay vì 3 — khi mọi người chat nhiều, thẻ bị
+  đẩy lên cao.
+
 ## [2.18.2] — 2026-10-26
 
 ### Sửa
