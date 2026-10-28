@@ -3,6 +3,15 @@
 Bản sao changelog của ứng dụng AutoLastZ (bot cho bản PC *Last Z: Survival Shooter*). Bộ cài từng bản ở
 [Releases](https://github.com/0xphuong/autolastz-releases/releases); app đọc [`versions.json`](versions.json) để tự cập nhật.
 
+## [2.19.1] — 2026-10-28
+
+### Sửa
+- *Cập nhật* báo lỗi `SSL: CERTIFICATE_VERIFY_FAILED … unable to get issuer certificate` khi tải bộ cài: github.com vừa
+  đổi sang chứng chỉ Sectigo đời mới mà kho chứng chỉ gốc của Windows trên một số máy chưa có. Giờ app để Windows tự
+  kiểm tra chứng chỉ (Windows tự tải chứng chỉ gốc còn thiếu), dự phòng bằng bộ chứng chỉ đi kèm app.
+  Máy đang ở bản cũ bị lỗi này: mở <https://github.com> một lần bằng Edge rồi bấm *Cập nhật* lại, hoặc tải bộ cài
+  về cài đè.
+
 ## [2.19.0] — 2026-10-28
 
 ### Mới
