@@ -3,6 +3,21 @@
 Bản sao changelog của ứng dụng AutoLastZ (bot cho bản PC *Last Z: Survival Shooter*). Bộ cài từng bản ở
 [Releases](https://github.com/0xphuong/autolastz-releases/releases); app đọc [`versions.json`](versions.json) để tự cập nhật.
 
+## [2.19.0] — 2026-10-28
+
+### Mới
+- **Đặt lịch cho Mùa Giải** (Khủng Long Nhanh / Kiếm, Zombie, Zombie Khổng Lồ): trong màn chi tiết chọn *Cách chạy →
+  Theo lịch*, thêm các khung giờ (vd. 02:00 × 15 lần, chọn ngày trong tuần). Tới giờ bot tự tìm và tổ đội đánh đủ số
+  lần của khung đó rồi nghỉ tới khung sau. Giờ theo đồng hồ máy tính; AutoLastZ phải đang chạy lúc tới giờ.
+  - *Trễ tối đa* (mặc định 60 phút): đúng giờ mà bot đang bận Kho Báu hoặc chưa chạy thì vẫn đánh nếu chưa trễ quá
+    mức này, quá thì bỏ khung đó.
+  - Tuỳ chọn *Báo Telegram / Zalo* (mặc định tắt): gửi tin khi tới lịch và khi đánh xong mỗi khung.
+  - Thẻ tính năng và hàng đợi hiện *chờ lịch 02:00*.
+  - Bấm Dừng / Bắt đầu lại giữa khung không đánh lại từ đầu.
+- **Đặt lịch cho Bạo Quân Zombie và BOSS Cuồng Bạo** (tab *Sự kiện*): cùng kiểu *Cách chạy → Theo lịch*, mỗi khung
+  giờ có số lượt tối đa (Bạo Quân: số lần tổ đội khi sự kiện đang mở; BOSS: số lượt Công, mỗi xe một lượt). Tới giờ BOSS
+  mở trang sự kiện ngay, không chờ hẹn mốc 6 giờ. *Trễ tối đa* dùng chung cho hai sự kiện.
+
 ## [2.18.3] — 2026-10-27
 
 ### Sửa
