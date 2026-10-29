@@ -3,6 +3,14 @@
 Bản sao changelog của ứng dụng AutoLastZ (bot cho bản PC *Last Z: Survival Shooter*). Bộ cài từng bản ở
 [Releases](https://github.com/0xphuong/autolastz-releases/releases); app đọc [`versions.json`](versions.json) để tự cập nhật.
 
+## [2.20.0] — 2026-10-29
+
+### Mới
+- **Chữa trị theo đợt nhỏ** (*Tính năng → Chữa trị thương binh → Số lính mỗi lần chữa*, mặc định **100**): game chọn sẵn
+  mọi thương binh nên mỗi lượt chữa mất vài giờ. Giờ trước khi bấm *Chữa Trị*, bot đặt số lính từ loại lính trên cùng
+  xuống cho đủ số này (loại trên ít hơn thì lấy thêm ở loại kế tiếp), các loại còn lại để 0. Chữa xong bot nhận lính và
+  chữa đợt kế tiếp. Đặt 0 = chữa hết như trước. Không đặt được số (đọc lại ô số sai) thì bỏ lượt, không chữa cả.
+
 ## [2.19.1] — 2026-10-28
 
 ### Sửa
