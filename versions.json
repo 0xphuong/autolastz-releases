@@ -2,13 +2,13 @@
   "schema_version": 1,
   "products": {
     "autolastz": {
-      "latest": "2.20.0",
+      "latest": "2.20.1",
       "minimum": "2.7.0",
-      "released_at": "2026-10-29",
-      "download_url": "https://github.com/0xphuong/autolastz-releases/releases/download/v2.20.0/AutoLastZ-Setup-2.20.0.exe",
-      "sha256": "d6bdf8420fb2e952cf06a791f9f0c85b10f44ae916677b5a2fde82967bc46107",
-      "size": 64567946,
-      "changelog_url": "https://github.com/0xphuong/autolastz-releases/blob/main/CHANGELOG.md#2200--2026-10-29"
+      "released_at": "2026-10-30",
+      "download_url": "https://github.com/0xphuong/autolastz-releases/releases/download/v2.20.1/AutoLastZ-Setup-2.20.1.exe",
+      "sha256": "1846598e1fd1d0fa9b0dfa973a98d66e18b15d4ac6248f9f15253298a5de3b8d",
+      "size": 64567014,
+      "changelog_url": "https://github.com/0xphuong/autolastz-releases/blob/main/CHANGELOG.md#2201--2026-10-30"
     }
   }
 }

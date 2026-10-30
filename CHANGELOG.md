@@ -3,6 +3,15 @@
 Bản sao changelog của ứng dụng AutoLastZ (bot cho bản PC *Last Z: Survival Shooter*). Bộ cài từng bản ở
 [Releases](https://github.com/0xphuong/autolastz-releases/releases); app đọc [`versions.json`](versions.json) để tự cập nhật.
 
+## [2.20.1] — 2026-10-30
+
+### Sửa
+- Bot kẹt ở bảng **Hành Quân tới "Đất Trống"** và không làm gì được nữa: nhiệm vụ Radar *Giúp Đỡ Đồng Minh* — khi căn
+  cứ đồng minh đã dời đi, bấm *Hỗ trợ* mở bảng Hành Quân thay vì hỗ trợ ngay. Bot tưởng đã xong, mở lại radar trong lúc
+  bảng che hết màn hình và lặp *Đến → Hỗ trợ* suốt 10 phút. Giờ gặp bảng này bot bấm ra ngoài để đóng (không gửi xe),
+  bỏ nhiệm vụ đó và chạy tiếp các việc khác. Bảng Hành Quân còn mở ở bất kỳ đâu (lúc mở radar, mỗi vòng radar, lúc rảnh)
+  cũng được đóng và kiểm tra lại là đã đóng.
+
 ## [2.20.0] — 2026-10-29
 
 ### Mới
