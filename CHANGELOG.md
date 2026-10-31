@@ -3,6 +3,13 @@
 Bản sao changelog của ứng dụng AutoLastZ (bot cho bản PC *Last Z: Survival Shooter*). Bộ cài từng bản ở
 [Releases](https://github.com/0xphuong/autolastz-releases/releases); app đọc [`versions.json`](versions.json) để tự cập nhật.
 
+## [2.20.2] — 2026-10-31
+
+### Sửa
+- **BOSS Cuồng Bạo** không tìm thấy tab sự kiện: mùa mới đổi ảnh boss trên tab ở dải tab dưới trang Sự Kiện, mẫu cũ chỉ
+  còn khớp 0,44–0,54. Thêm mẫu tab mới (đang chọn / không chọn), vẫn giữ mẫu mùa cũ. Màn hình *Công* trên bản đồ không
+  đổi (mẫu cũ vẫn khớp 0,997).
+
 ## [2.20.1] — 2026-10-30
 
 ### Sửa
