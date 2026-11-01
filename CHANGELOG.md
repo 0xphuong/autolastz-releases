@@ -3,6 +3,14 @@
 Bản sao changelog của ứng dụng AutoLastZ (bot cho bản PC *Last Z: Survival Shooter*). Bộ cài từng bản ở
 [Releases](https://github.com/0xphuong/autolastz-releases/releases); app đọc [`versions.json`](versions.json) để tự cập nhật.
 
+## [2.21.0] — 2026-11-01
+
+### Thêm
+- **Radar: báo máy bay Kho Báu.** Khi mở radar mà thấy ghim cam hình trực thăng (*Khám Phá Kho Báu* — máy bay rơi, có
+  thể gọi Đồng Minh cùng khám phá), bot bấm xem thời gian còn lại rồi gửi Telegram / Zalo kèm ảnh, thời gian máy bay còn trong radar và giờ nó biến mất (vd *còn 7:18:33 … mất lúc 17:42*), mỗi máy bay chỉ báo một
+  lần. Bot không bấm *Đến*, bạn tự vào thả kho báu. Bật / tắt ở *Nhiệm vụ Radar → Báo máy bay Kho Báu* (mặc định bật;
+  cần bật Nhiệm vụ Radar, radar được mở theo *Mở radar mỗi*).
+
 ## [2.20.2] — 2026-10-31
 
 ### Sửa
