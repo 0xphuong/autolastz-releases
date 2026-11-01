@@ -3,6 +3,18 @@
 Bản sao changelog của ứng dụng AutoLastZ (bot cho bản PC *Last Z: Survival Shooter*). Bộ cài từng bản ở
 [Releases](https://github.com/0xphuong/autolastz-releases/releases); app đọc [`versions.json`](versions.json) để tự cập nhật.
 
+## [2.22.0] — 2026-11-01
+
+### Thêm
+- **Radar: tự thả kho báu từ máy bay.** Ô *Nhiệm vụ Radar → Thả kho báu sau* (giây): sau khi phát hiện máy bay Kho Báu
+  trong radar chừng đó giây, bot mở radar, bấm lại ghim máy bay và bấm *Đến* để thả kho báu, rồi báo Telegram / Zalo.
+  Để 0 (mặc định) = không thả, chỉ báo như 2.21.0. Tới giờ thả bot mở radar ngay, không chờ *Mở radar mỗi*.
+
+### Sửa
+- **Treo ở màn Bệnh Viện** khoảng 1 phút, lặp lại mỗi 2 phút: bấm icon chữa trị xong Bệnh Viện mở chậm (~8 giây), bot
+  chỉ chờ 3 giây nên tưởng không mở được và đi làm việc khác; Bệnh Viện mở ra sau đó che bản đồ tới lượt làm mới góc
+  nhìn. Giờ bot chờ tới 12 giây, và lúc rảnh gặp Bệnh Viện còn mở thì bấm quay lại ngay.
+
 ## [2.21.0] — 2026-11-01
 
 ### Thêm
