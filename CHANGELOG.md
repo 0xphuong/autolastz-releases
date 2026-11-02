@@ -3,6 +3,25 @@
 Bản sao changelog của ứng dụng AutoLastZ (bot cho bản PC *Last Z: Survival Shooter*). Bộ cài từng bản ở
 [Releases](https://github.com/0xphuong/autolastz-releases/releases); app đọc [`versions.json`](versions.json) để tự cập nhật.
 
+## [2.23.0] — 2026-11-02
+
+### Thêm
+- **Xây dựng — tự tăng cấp công trình trong Trụ Sở.** Thẻ *Xây dựng* (tab Chữa trị ở giao diện cũ): mỗi *Kiểm tra mỗi*
+  (mặc định 10 phút) bot về Trụ Sở xem icon mũ công nhân; còn người rảnh (chấm đỏ / số *x/y*) thì bấm mũ → *Xây dựng* →
+  game chọn công trình → *Tăng Cấp*. Nút *Hoàn thành ngay* **màu xanh lá** (miễn phí) thì bấm luôn và lặp tới khi hết
+  miễn phí; sau đó bấm *Tăng Cấp* (chỉ khi mọi dòng *Nhu cầu* có ✓), bấm icon bắt tay xin Liên Minh hỗ trợ, rồi bấm
+  bong bóng tăng tốc miễn phí (tròn xanh lá, mũi tên vàng) trên đầu công trình khi nó hiện. Mỗi lần vào Trụ Sở bot
+  cũng bấm mọi bong bóng bắt tay / tăng tốc miễn phí đang thấy (cả công trình bạn tự xây), và mở bảng *Công Nhân Kiến
+  Trúc* bấm nút xanh lá *Hoàn thành ngay* của công trình đã xuống mức miễn phí sau khi đồng minh hỗ trợ (kể cả khi công
+  trình nằm ngoài màn hình, kể cả khi hết công nhân rảnh). Tuỳ chọn *Báo Telegram /
+  Zalo* (mặc định tắt) gửi tin kèm ảnh mỗi khi tăng cấp. Không
+  bao giờ bấm *Hoàn thành ngay* màu vàng (kim cương), *Tăng Tốc* hay *Mua* công nhân. Có ô *Bỏ qua công trình* (tên,
+  cách nhau dấu phẩy). Cần mã tính năng `build` trong gói license.
+
+### Sửa
+- Tắt Kho Báu (chỉ chạy việc phụ) thì bot không còn *Trụ Sở → Thế Giới* khoảng 30 giây một lần: lúc đó làm mới góc
+  nhìn chỉ theo thời gian (150 giây), vì vòng rảnh không canh trực thăng rất ngắn.
+
 ## [2.22.0] — 2026-11-01
 
 ### Thêm
