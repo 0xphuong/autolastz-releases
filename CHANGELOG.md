@@ -3,6 +3,56 @@
 Bản sao changelog của ứng dụng AutoLastZ (bot cho bản PC *Last Z: Survival Shooter*). Bộ cài từng bản ở
 [Releases](https://github.com/0xphuong/autolastz-releases/releases); app đọc [`versions.json`](versions.json) để tự cập nhật.
 
+## [3.0.0] — 2026-11-11
+
+### Thêm
+- **Chạy trên LDPlayer (thử nghiệm).** Bot tự dò LDPlayer 9 đang chạy và điều khiển Last Z bản Android qua ADB (bật
+  *ADB debugging* trong cài đặt LDPlayer, màn dọc 720×1280). Máy LDPlayer hiện trong danh sách cửa sổ như một cửa sổ
+  game (bỏ chọn cửa sổ PC nếu chỉ chạy LDPlayer); tắt ở Cài đặt → Game → *Chạy trên LDPlayer*, *Địa chỉ ADB* để trống
+  = tự dò. Ảnh mẫu và toạ độ của bản PC được dùng lại (ảnh LDPlayer
+  được ghép thành khung 720×950 kiểu PC). Chạm qua ADB không bị giới hạn theo khung hình như bản PC (game Android chạy
+  ~60 fps), bot chạy được cả khi cửa sổ LDPlayer thu nhỏ hay ngắt Remote Desktop. Chưa hỗ trợ: tự mở game, gõ tin
+  chat tiếng Việt có dấu; Kim cương thu nhỏ bản đồ bằng chụm hai ngón (chưa kiểm chứng).
+
+### Thay đổi
+- **Giành hòm Kho Báu kiểu "muộn mà dày"** (mặc định, Kho Báu → *Kiểu bấm*). Trước đây bot bấm liên tục từ lúc còn
+  N giây — hàng trăm cú vào trực thăng trước khi hòm có, mỗi cú có thể là một yêu cầu lên máy chủ, nên lúc hòm hiện
+  lệnh mở hòm phải xếp hàng sau chúng. Giờ từ lúc còn N giây bot chỉ đọc đồng hồ thật dày để chốt mốc 0 (sai số
+  ~0,2 giây), không làm việc gì khác, rồi bắt đầu bấm từ *Bấm trước mốc 0* (mặc định 1 giây, cộng 1 giây trừ hao vì
+  đồng hồ làm tròn), bấm dày đúng một điểm tới *Bấm thêm sau khi hết giờ* (mặc định 3 giây). Kiểu cũ vẫn chọn được.
+- **LDPlayer — cú bấm tự chỉnh theo tốc độ game** (Cài đặt → Game → *Tự chỉnh theo tốc độ game*, mặc định bật): lúc
+  giành hòm bot đo số khung hình/giây của game mỗi 1,5 giây; game giật thì tự giãn nghỉ ≥ 3 khung, giữ ≥ 1 khung, không
+  bao giờ nhanh hơn cài đặt. *Thử bấm 3 giây* cũng dùng cách này.
+- **LDPlayer — đo đạc lúc giành hòm** (ghi vào nhật ký): ping tới máy chủ game, tốc độ khung hình, mốc giờ có mili
+  giây (bắt đầu / ngừng bấm, đồng hồ biến mất) và video `debug/khobau_spam_*.mp4` có chấm chỗ chạm (*Quay video lúc
+  giành hòm*, cần license chế độ phát triển) — để biết thua do mạng hay do cú bấm.
+- **Bảng bố cục theo loại máy.** Mọi điểm bấm / kéo theo toạ độ cố định (bấm ra ngoài, ô xe trong popup, tâm màn, ô
+  nhập chat…) gom về một bảng, có bản PC và bản LDPlayer. Các cú bấm ra ngoài để đóng popup *Hành Quân*, bảng 🔍, popup
+  mỏ giờ kiểm tra lại là popup đã đóng, chưa đóng thì thử điểm khác; bảng tăng cấp (Xây dựng) không đóng bằng nút X thì
+  dùng ESC. Kim cương trên LDPlayer: mẫu icon riêng (bản đồ chiến lược LDPlayer to hơn PC 1.2 lần — mẫu PC không
+  nhận ra mỏ nào), kéo bản đồ và nhận icon chỉ ở dải giữa màn để tính khoảng cách đúng.
+
+- **Bộ ảnh kiểm tra hồi quy** (`python -m autolastz regress`): 23 màn PC + LDPlayer, mỗi màn ghi rõ bộ nhận diện phải
+  thấy / không được thấy — chạy trước mỗi bản build để sửa mẫu ảnh không làm hỏng chỗ khác.
+
+### Sửa
+- **LDPlayer — ảnh gửi Telegram / Zalo** là ảnh màn hình LDPlayer thật, không còn ảnh ghép bị lặp dải (trông như bể).
+- **LDPlayer — chỉnh được cú bấm**: Cài đặt → Game có *số ngón* (luân phiên, không chạm cùng lúc), *giữ mỗi cú* và *nghỉ
+  giữa hai cú*; đổi xong bấm *Thử bấm 3 giây* là thử ngay.
+- **LDPlayer — cú bấm bị "dính"** (game gộp nhiều cú thành một): đo từng khung video thì nguyên nhân là ngón nhấc lên
+  quá ngắn — nghỉ 20 ms game không nhận cú nào, 30 ms nhận ~40 %, 50 ms ~90 %, 60 ms gần đủ; độ lệch điểm bấm và thời
+  gian giữ không ảnh hưởng. Nghỉ mặc định giờ là 60 ms, tối thiểu 50 ms (~11 cú được nhận mỗi giây, trước đây 24 cú/giây
+  nhưng gần như không cú nào ăn).
+- **LDPlayer — Radar không mở được**: nút '?' nhận ra màn radar nằm sát mép trái trên LDPlayer (PC lệch vào trong), bot
+  không nhận ra đã vào radar nên bỏ cuộc mỗi lượt. Giờ tìm cả vùng đó.
+- **LDPlayer — gửi tin chat liên minh**: bot gõ chữ 3 lần ("tytyty") rồi không bấm gửi. Thanh chat trên LDPlayer rộng
+  tới mép phải nên nút gửi nằm ngoài vùng bot tìm; giờ tìm cả vùng đó, và nếu phải gõ lại thì xoá chữ cũ trước.
+- **Kết quả Kho Báu**: bấm thẻ kết quả không mở popup Chi Tiết thì bấm lại một lần.
+- **Sau Kho Báu bấm lung tung trên bản đồ**: bước kiểm tra hòm tưởng đang ở màn chat (nút Quay lại của màn chat vừa đóng)
+  rồi bấm vị trí tab chat lên bản đồ, mở menu ô đất. Giờ chỉ bấm tab khi đang thật sự ở màn chat.
+- **Đào tài nguyên** kiểm tra khung vàng quanh xe vừa chọn trong popup *Hành Quân* (như BOSS); chưa chọn được thì bấm
+  lại một lần rồi bỏ lượt, không còn gửi nhầm xe game chọn sẵn (xe 1) khi chỉ cho dùng các xe cuối.
+
 ## [2.23.0] — 2026-11-02
 
 ### Thêm
