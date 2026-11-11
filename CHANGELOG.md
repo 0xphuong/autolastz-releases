@@ -3,6 +3,15 @@
 Bản sao changelog của ứng dụng AutoLastZ (bot cho bản PC *Last Z: Survival Shooter*). Bộ cài từng bản ở
 [Releases](https://github.com/0xphuong/autolastz-releases/releases); app đọc [`versions.json`](versions.json) để tự cập nhật.
 
+## [3.0.1] — 2026-11-11
+
+### Sửa
+- **Kho Báu: trở lại kiểu bấm sớm (bấm liên tục từ "Bắt đầu bấm khi còn" tới quá mốc 0).** Kiểu "muộn mà dày" của 3.0.0
+  ước tính mốc 0 trễ ~2 giây trên LDPlayer (11/11 18:57: hòm đã bị lấy trước cú bấm đầu tiên). Ai đang để "muộn mà dày"
+  được tự chuyển về "Bấm sớm" một lần; vẫn chọn lại được (ghi là thử nghiệm).
+- **Kho Báu: không còn kéo bản đồ khi tìm hòm / kết quả.** Bot chỉ vuốt danh sách chat khi chắc chắn đang ở màn chat;
+  bước tìm hòm sau khi giành mở chat Liên Minh có kiểm tra (bấm lại khi game nuốt cú bấm), không mở được thì bỏ qua.
+
 ## [3.0.0] — 2026-11-11
 
 ### Thêm
