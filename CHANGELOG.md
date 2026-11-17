@@ -3,19 +3,6 @@
 Bản sao changelog của ứng dụng AutoLastZ (bot cho bản PC *Last Z: Survival Shooter*). Bộ cài từng bản ở
 [Releases](https://github.com/0xphuong/autolastz-releases/releases); app đọc [`versions.json`](versions.json) để tự cập nhật.
 
-## [3.0.2] — 2026-11-16
-
-### Sửa
-- **Kho Báu: chỉ báo Telegram / Zalo khi chắc chắn là kho báu thật.** Trước đây bot báo "Phát hiện máy bay Kho Báu"
-  ngay khi thấy hình giống trực thăng hoặc ghim chat — 16/11 19:08 trên LDPlayer một căn cứ bị nhận nhầm là trực thăng
-  nên báo dù không có kho báu. Giờ bot bấm vào trực thăng trước, chỉ báo khi popup **Khám Phá Kho Báu** mở ra có nút
-  **Thăm Dò** (chưa ai đào, chưa có giờ) hoặc có đồng hồ (đã có xe đào); tin báo kèm ảnh popup. Bấm nhầm thì đóng menu,
-  bỏ qua chỗ đó 1 phút, không báo. Chế độ "Chỉ thông báo" (không bấm trực thăng) vẫn báo ngay, ghi "chưa xác nhận".
-- **Kho Báu: không còn nhầm popup công trình liên minh là Kho Báu.** 16/11 19:48 popup **Thực Phẩm Liên Minh** (cũng có
-  đồng hồ "2d 17:23:43" và nút sao / chia sẻ) bị coi là popup Kho Báu đang mở: bot báo "Kho Báu còn 17:26:10" rồi ngồi
-  canh đồng hồ mãi, bỏ hết việc khác. Giờ đồng hồ chỉ được tin khi popup có tiêu đề "Khám Phá Kho Báu"; không phải thì bot đóng
-  popup và làm tiếp việc thường.
-
 ## [3.0.1] — 2026-11-11
 
 ### Sửa
