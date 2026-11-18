@@ -3,6 +3,25 @@
 Bản sao changelog của ứng dụng AutoLastZ (bot cho bản PC *Last Z: Survival Shooter*). Bộ cài từng bản ở
 [Releases](https://github.com/0xphuong/autolastz-releases/releases); app đọc [`versions.json`](versions.json) để tự cập nhật.
 
+## [3.0.3] — 2026-11-18
+
+### Thêm
+- **Kho Báu: điểm bấm né hướng xe kéo tới** (Cài đặt Kho Báu → *Điểm bấm*, mặc định *Né hướng xe*). Sát giờ xe của đồng
+  minh đứng đè lên tâm trực thăng nên bấm giữa máy bay hay trúng xe. Giờ bot nhìn các mũi tên đường hành quân quanh trực
+  thăng (mũi tên và dải đường đi) để biết xe đang tới từ phía nào, rồi bấm **đầu** (kính buồng lái) hoặc **đuôi** (cần đuôi)
+  máy bay — chọn bên ngược với xe; không bao giờ bấm dưới tâm (nút Thăm Dò / Trở về) hay ra ngoài vùng máy bay. Xe tới từ nhiều phía (hoặc
+  không thấy xe) thì bấm vài cú ở đầu rồi vài cú ở đuôi, nghỉ một chút khi đổi chỗ (đổi chỗ từng cú thì game gộp hai cú
+  thành một cú kéo, bản đồ trượt). Cứ 2 giây bot chụp lại: tìm lại máy bay — bản đồ có trượt thì bấm theo vị trí mới — và
+  xem lại hướng xe. Popup Kho Báu đang mở không còn bị tính nhầm là xe tới. Chọn *Giữa máy bay (cũ)* để bấm như trước.
+
+### Sửa
+- **Chữa trị: theo giao diện Bệnh Viện mới.** Game bỏ nút −/+ ở từng loại lính, chỉ còn thanh trượt và ô số, nên bot
+  không tìm được hàng lính để đặt số lính chữa (*Số lính chữa mỗi lượt*) và bỏ lượt chữa. Giờ bot tìm hàng theo nút kéo
+  của thanh trượt, gõ số vào ô bên phải rồi đọc lại; đọc được cả dòng *Đơn vị chịu ST* ở vị trí mới. Giao diện cũ vẫn chạy.
+- **Kho Báu: không còn nhầm popup Thực Phẩm Liên Minh / BOSS Cuồng Bạo là popup Kho Báu.** Các popup này cũng có đồng hồ và
+  nút sao / chia sẻ (16/11 19:48: bot báo "Kho Báu còn 17:26:10" rồi ngồi canh mãi). Giờ chỉ popup có **ảnh trực thăng ở
+  đầu popup** mới được coi là Kho Báu; popup khác thì bot đóng lại và làm việc thường, không báo.
+
 ## [3.0.1] — 2026-11-11
 
 ### Sửa
