@@ -3,6 +3,21 @@
 Bản sao changelog của ứng dụng AutoLastZ (bot cho bản PC *Last Z: Survival Shooter*). Bộ cài từng bản ở
 [Releases](https://github.com/0xphuong/autolastz-releases/releases); app đọc [`versions.json`](versions.json) để tự cập nhật.
 
+## [3.1.0] — 2026-11-18
+
+### Thêm
+- **Thẻ Chiến đấu** trong *Tính năng* (mặc định tắt, cần gói có tính năng *Chiến đấu*), bên trong có hai việc bật/tắt riêng.
+  Chỉ chạy lúc rảnh ở bản đồ thế giới; Kho Báu vẫn ưu tiên số 1.
+  - **Hỗ trợ Liên Minh**: khi đồng minh xin hỗ trợ (xây, nghiên cứu, chữa trị), cột phải bản đồ hiện icon bắt tay nền vàng;
+    bot bấm icon đó để hỗ trợ tất cả cùng lúc — không tốn gì, không mở bảng nào. Kiểm tra mỗi 15 giây (5–600).
+  - **Chủ động tổ đội**: khi icon đầu lâu đỏ cạnh 🔍 có số (Liên Minh có tổ đội còn chỗ), bot mở *Chi Tiết Tổ Đội*, bấm
+    nút + của tổ đội trên cùng, chọn xe rảnh (chọn được xe nào — để trống = mọi xe) rồi Hành Quân. Icon không có số = hết
+    chỗ, bỏ qua. Hết thể lực thì nghỉ 10 phút, không bao giờ bấm *Bổ sung Nhiên Liệu*. Kiểm tra mỗi 30 giây (10–600).
+
+### Sửa
+- **LDPlayer: đọc được thể lực trong popup Hành Quân.** Trên LDPlayer số thể lực nằm sát mép phải, ngoài vùng đọc cũ nên
+  BOSS / Mùa Giải ghi "thể lực ?" và không giữ được mức thể lực tối thiểu.
+
 ## [3.0.3] — 2026-11-18
 
 ### Thêm
