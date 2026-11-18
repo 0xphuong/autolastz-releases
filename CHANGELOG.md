@@ -3,6 +3,21 @@
 Bản sao changelog của ứng dụng AutoLastZ (bot cho bản PC *Last Z: Survival Shooter*). Bộ cài từng bản ở
 [Releases](https://github.com/0xphuong/autolastz-releases/releases); app đọc [`versions.json`](versions.json) để tự cập nhật.
 
+## [3.2.0] — 2026-11-18
+
+### Thêm
+- **Nhiệm vụ treo thưởng → Cướp** (thẻ mới trong *Tính năng*, mặc định tắt, cần gói có tính năng *Nhiệm vụ treo thưởng*).
+  Bot **quét hết bản đồ** từng server (toạ độ 1–999): từ góc trên-trái, trái sang phải, trên xuống dưới — đầu mỗi hàng
+  mở 🔍 nhập **#** / **X** / **Y** để tới đúng toạ độ, thu nhỏ về bản đồ chiến khu rồi kéo dần sang phải; nhớ chỗ đang quét
+  để lượt sau quét tiếp (kể cả sau khi tắt app). Một server mất khoảng 1,5–2 giờ. Server nhập một cái `549` hoặc khoảng
+  `540-555`, đi lần lượt. Tìm treo thưởng theo màu đã chọn (cam → tím → xanh). Bấm từng cái, đọc phần thưởng (rương,
+  sổ kỹ năng — kèm màu, bản vẽ, EXP) và chỉ **Cướp Bóc** khi đạt điều kiện đã chọn (vd *Rương ≥ 15*). Cướp Bóc nhận thưởng
+  ngay, không cần xe. Cái đã hết lượt cướp thì bỏ qua. Tối đa 5 lần mỗi ngày (theo ngày của máy tính).
+  Ô **Server không cướp** (vd `565,566` — server của mình, của người quen; để trống = cướp mọi server đã nhập).
+  Ở bản đồ chiến khu game ẩn chat nên bot không thấy máy bay Kho Báu: mỗi lượt chỉ quét tối đa 60 giây (chỉnh được) rồi
+  về Trụ Sở xem chat — có máy bay thì làm Kho Báu trước, lượt sau quét tiếp chỗ cũ.
+  *Nhiệm vụ cá nhân* và *Nhiệm vụ đồng minh* sẽ có sau.
+
 ## [3.1.0] — 2026-11-18
 
 ### Thêm
