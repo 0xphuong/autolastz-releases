@@ -3,6 +3,24 @@
 Bản sao changelog của ứng dụng AutoLastZ (bot cho bản PC *Last Z: Survival Shooter*). Bộ cài từng bản ở
 [Releases](https://github.com/0xphuong/autolastz-releases/releases); app đọc [`versions.json`](versions.json) để tự cập nhật.
 
+## [3.2.1] — 2026-11-20
+
+### Đổi
+- **Kho Báu: không có xe đông thì bấm giữa thân máy bay.** Chỉ né sang đầu / đuôi máy bay khi có nhiều xe đang kéo tới;
+  không có xe hoặc chỉ lẻ tẻ thì bấm thẳng vào giữa thân như cũ.
+
+### Thêm
+- **Nhiệm vụ treo thưởng → Cướp: thông báo khi cướp được.** Chọn kênh trong phần Cướp: *Báo qua Telegram* (nội dung +
+  ảnh màn nhận thưởng) và / hoặc *Báo qua Zalo* (chỉ nội dung). Tin gồm server, các phần thưởng đã cướp và lần thứ mấy
+  trong ngày. Cần điền bot token + chat id ở Cài đặt.
+
+### Sửa
+- **Treo thưởng: mở bản đồ xong lại về Trụ Sở, không đi tìm.** Nhãn *18+ Chơi quá 180 phút…* của game che chữ
+  *Chiến Khu* ở góc trên-trái, bot đọc nhầm ra server 18 và bỏ lượt. Nay chỉ nhận số server 3–4 chữ số và đọc lại phần
+  không bị nhãn che.
+- **Treo thưởng: không thấy nút tìm toạ độ** khi dải thông báo màu cam chạy chữ đè lên nút kính lúp — thêm mẫu nửa dưới
+  của nút.
+
 ## [3.2.0] — 2026-11-18
 
 ### Thêm
