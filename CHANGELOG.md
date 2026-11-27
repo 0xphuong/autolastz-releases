@@ -3,6 +3,28 @@
 Bản sao changelog của ứng dụng AutoLastZ (bot cho bản PC *Last Z: Survival Shooter*). Bộ cài từng bản ở
 [Releases](https://github.com/0xphuong/autolastz-releases/releases); app đọc [`versions.json`](versions.json) để tự cập nhật.
 
+## [3.3.0] — 2026-11-25
+
+### Thêm
+- **Tự tắt mở lại game khi treo / tắt / không thấy game — cả PC và LDPlayer.** Cài đặt → Game → *Tự tắt mở lại game khi
+  treo / tắt* (mặc định bật) và *Chờ trước khi tắt mở lại* N phút (mặc định 5). Lần 1 tắt mở lại khi sự cố kéo dài N
+  phút, lần 2 sau lần 1 là 2N phút, lần 3 sau lần 2 là 3N phút (N = 5: phút 5, 15, 30). Trong lúc chờ mà game tự hết lỗi
+  hoặc bạn mở lại tay thì bot chạy tiếp. Sau 3 lần vẫn lỗi thì dừng cửa sổ đó và báo Telegram / Zalo; chạy ổn 30 phút
+  thì đếm lại từ lần 1.
+  - Game treo = hình đứng yên ≥ 2 phút (hoặc LDPlayer báo game *Không phản hồi*): tắt hẳn game rồi mở lại.
+  - PC: mở lại qua launcher *Last Z.exe*, chờ vào bản đồ.
+  - LDPlayer: game tắt / văng ra màn hình chính → tắt hẳn game và mở lại từ biểu tượng; LDPlayer tắt hẳn → mở lại máy
+    ảo LDPlayer (ldconsole) rồi mở game.
+
+### Đổi
+- Bỏ giới hạn cũ "game tắt thì mở lại tối đa 3 lần/giờ, mở ngay" — thay bằng quy tắc chờ ở trên.
+
+### Sửa
+- **Kim cương: đi quét bản đồ trong khi các xe được dùng đều đang đào.** Trên LDPlayer ô số xe `2/3` thỉnh thoảng bị
+  đọc thành `213` / `13` (dấu / thành số 1, hoặc chụp lúc cột xe đang hiện), bot coi như không biết số xe và vẫn quét
+  kim cương hơn 10 phút. Nay đọc được cả `213`, đọc lỗi thì chụp lại tối đa 2 lần; vẫn không đọc được thì không quét kim
+  cương (các loại tài nguyên khác vẫn thử 1 lượt như cũ).
+
 ## [3.2.1] — 2026-11-20
 
 ### Đổi
