@@ -3,6 +3,21 @@
 Bản sao changelog của ứng dụng AutoLastZ (bot cho bản PC *Last Z: Survival Shooter*). Bộ cài từng bản ở
 [Releases](https://github.com/0xphuong/autolastz-releases/releases); app đọc [`versions.json`](versions.json) để tự cập nhật.
 
+## [3.4.0] — 2026-11-27
+
+### Thêm
+- **Kho Báu — tiếp viện tăng tốc (chế độ *Đào + giành hòm*, LDPlayer).** Xe đi tiếp viện chạy nhanh hơn xe đi đào, nên
+  khi thấy kho báu bot: thu nhỏ sang bản đồ chiến lược → bấm nhà đồng minh (xanh dương) gần máy bay nhất → *Tiếp viện* →
+  *Hành Quân* (xe rảnh ở nhà game chọn sẵn) → quay lại máy bay, phóng to hết mức → chờ ảnh xe ở cột phải có huy hiệu
+  tháp xanh dương (đã tới nhà đồng minh) → nhấn giữ ảnh xe, kéo vào mũi / thân máy bay, thấy vòng chọn xanh lá thì thả —
+  xe đi đào luôn. Không có xe ở nhà, nhà mình gần kho báu hơn, không có nhà đồng minh nào nhận tiếp viện, hay bước nào
+  không làm được thì đào cách cũ. Bật / tắt: Kho Báu → *Tiếp viện tăng tốc* (mặc định bật).
+  Kho báu ở xa cụm liên minh (bản đồ chiến lược không thấy nhà nào): thu nhỏ tiếp sang bản đồ lãnh thổ, tìm cụm nhà
+  đồng minh gần máy bay, phóng to vào đó và chọn nhà rìa cụm phía máy bay.
+- **Kho Báu: thẻ máy bay bị tin nhắn mới đẩy lên thì vuốt chat tìm tới 8 lần** (trước 3).
+- **Tin nhắn khi giành được hòm: nhiều câu, gửi ngẫu nhiên.** Nhập nhiều nội dung cách nhau bằng dấu `;` (vd
+  `cam on;thanks;ty`), mỗi lần bot gửi một câu chọn ngẫu nhiên (cả nút *Gửi thử*). Tối đa 500 ký tự.
+
 ## [3.3.0] — 2026-11-25
 
 ### Thêm
