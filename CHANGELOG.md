@@ -3,6 +3,11 @@
 Bản sao changelog của ứng dụng AutoLastZ (bot cho bản PC *Last Z: Survival Shooter*). Bộ cài từng bản ở
 [Releases](https://github.com/0xphuong/autolastz-releases/releases); app đọc [`versions.json`](versions.json) để tự cập nhật.
 
+## [3.4.1] — 2026-11-27
+
+### Sửa
+- Đào tài nguyên / Kim cương: xe thuê đã hết hạn (ô khoá vé Z cuối cột xe) không còn bị tính là xe dùng được. Trước đó game vẫn ghi `0/4` khi chỉ còn 3 xe, bot tưởng xe 4 rảnh, chọn xe 4 không được rồi cứ vài phút lại đi quét kim cương.
+
 ## [3.4.0] — 2026-11-27
 
 ### Thêm
